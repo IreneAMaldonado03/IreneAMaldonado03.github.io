@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Media/icon.png">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: .5rem;
+            padding-top: .5rem;
+            background-color: #242320;
+            color: azure;
+        }
+
+        div {
+            padding: .5rem;
+            display: inline-block;
+            background-color: #242320;
+        }
+
+        h5 {
+            text-align: right;
+            font-size: 1rem;
+        }
+
+        h1 {
+            font-size: 4rem;
+        }
+
+        p {
+            padding: .5rem;
+            background-color: #202124;
+            font-size: 2rem;
+        }
+
+        .pa {
+            background-color: #ad1616;
+        }
+
+        .pc {
+            background-color: #299913;
+        }
+
+        .pb {
+            background-color: #ada317;
+        }
+    </style>
+    <title>IMC</title>
+</head>
+
+<body>
+    <div>
+        <h1>IMC</h1>
+        <p class="pa">
+            <script>
+                var nombre = prompt('Ingresa tu nombre', 'Pedro');
+                var peso = prompt('Ingresa tu peso en kilogramos', '56');
+                var altura = prompt('Ingresa tu altura en metros', '1.45');
+                var kg = parseInt(peso);
+                console.log(kg);
+                var m = parseFloat(altura);
+                console.log(m);
+                //IMC=peso/altura*altura
+                var IMCtotal = kg / (m * m);
+                var IMC = IMCtotal.toFixed(2);
+                console.log(IMC);
+                //Casos de recomendación
+                if (IMC > 25) {
+                    document.write(nombre + ' su IMC es de: ' + IMC + '<br>Se encuentra en un peso alto <br> Se recomienda hacer dieta y ejercicio<br>');
+                    document.write('<br><img src="Media/dietaejercicio.gif">');
+                }
+            </script>
+        </p>
+        <p class="pc">
+            <script>
+                if (IMC >= 22 && IMC <= 25) {
+                    document.write(nombre + ' su IMC es de: ' + IMC + '<br>Se encuentra en un peso correcto <br> Mantengase en chequeo constante<br>');
+                    document.write('<br><img src="Media/saludable.gif">');
+                }
+            </script>
+        </p>
+        <p class="pb">
+            <script>
+                if (IMC < 22) {
+                    document.write(nombre + ' su IMC es de: ' + IMC + '<br>Se encuentra en un peso bajo <br> Se recomienda mejorar su alimentación<br>');
+                    document.write('<br><img src="Media/dieta.gif">');
+                } 
+            </script>
+        </p>
+        <h5>Programa 002</h5>
+    </div>
+</body>
+
+</html>

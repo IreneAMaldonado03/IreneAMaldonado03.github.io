@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Media/icon.png">
+    <title>Conversor</title>
+    <style>
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 2.5rem;
+            padding-top: 2.5rem;
+            background-color: #242320;
+            color: azure;
+        }
+        div{
+            padding: 1rem;
+            display: inline-block;
+            background-color: #539add;
+        }
+        h5{
+            text-align: right;
+            font-size: 1rem;
+            margin: 0;
+        }
+        h1{
+            font-size: 3rem;
+        }
+        .res{
+            padding: .5rem;
+            font-size: 2rem;
+            background-color: #252525;
+            font-weight: bold;
+        }
+        button{
+            background-color: rgb(0, 52, 150);
+            color: aliceblue;
+        }
+        .oo{
+            font-size: 1.5rem;
+            color: #242320;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Conversor de Unidades</h1>
+        <p class="res">
+            <script>
+                /*
+                Converisones de 4 opciones:
+                1       2       3       4
+                m-cm    cm-m    ft-m    yd-m
+                m-ft    cm-ft   ft-cm   yd-cm
+                m-yd    cm-yd   ft-yd   yd-ft
+                */
+                var conversion = prompt('Ingrese la conversion que necesita:\n ~ m-cm, m-ft, m-yd\n ~ cm-m, cm-ft, cm-yd\n ~ ft-m, ft-cm, ft-yd\n ~ yd-m, yd-cm, yd-ft\n m=metros, cm=centimetros, ft=pies, yd=yardas','m-cm');
+                var unidad = prompt('Ingrese la cantidad a convertir:','1');
+                var u= parseFloat(unidad);
+                var uconvertida=0;
+                var conversionrealizada="";
+                /*
+                Converisones de 4 opciones:
+                1                   2                   3                   4
+                m-cm (m*100)       cm-m  (cm/100)       ft-m  (ft/3.281)    yd-m  (yd/1.094)
+                m-ft (m*3.281)     cm-ft (cm/30.48)     ft-cm (ft*30.48)    yd-cm (yd*91.44)
+                m-yd (m*1.094)     cm-yd (cm/91.44)     ft-yd (ft/3)        yd-ft (yd*3)
+                */
+                switch (conversion) {
+                    case 'm-cm':
+                        conversionrealizada= 'Metro a Centimetros';
+                        uconvertida=u*100;
+
+                        break;
+                    case 'm-ft':
+                        conversionrealizada= 'Metro a Pies';
+                        uconvertida=u*3.281;
+
+                        break;
+                    case 'm-yd':
+                        conversionrealizada= 'Metro a Yardas';
+                        uconvertida=u*1.094;
+
+                        break;
+                    case 'cm-m':
+                        conversionrealizada= 'Centimetro a Metros';
+                        uconvertida=u/100;
+
+                        break;
+                    case 'cm-ft':
+                        conversionrealizada= 'Centimetro a Pies';
+                        uconvertida=u/30.48;
+
+                        break;
+                    case 'cm-yd':
+                        conversionrealizada= 'Centimetro a Yarda';
+                        uconvertida=u/91.44;
+
+                        break;
+                    case 'ft-m':
+                        conversionrealizada= 'Pie a Metros';
+                        uconvertida=u/3.281;
+
+                        break;
+                    case 'ft-cm':
+                        conversionrealizada= 'Pie a Centimetros';
+                        uconvertida=u*30.48;
+
+                        break;
+                    case 'ft-yd':
+                        conversionrealizada= 'Pie a Yarda';
+                        uconvertida=u/3;
+                        
+                        break;
+                    case 'yd-m':
+                        conversionrealizada= 'Yarda a Metros';
+                        uconvertida=u/1.094;
+                        
+                        break;
+                    case 'yd-cm':
+                        conversionrealizada= 'Yarda a Centimetros';
+                        uconvertida=u*91.44;
+                        
+                        break;
+                    case 'yd-ft':
+                        conversionrealizada= 'Yarda a Pies';
+                        uconvertida=u*3;
+                        break;
+                
+                    default:
+                        document.write("La conversion no es valida, revise su escritura");
+                        break;
+                }
+                if (conversionrealizada!= "") {
+                    document.write("<br>" +conversionrealizada+ "<br>" +u+" equivale a "+uconvertida.toFixed(2)+"<br><br>");
+                }
+            </script>
+        </p>
+        <p class="oo">
+            <script >
+                document.write("¿Desea realizar otra operación? ");
+                document.write("<button onclick='location.reload()'>SI</button>");
+            </script>
+        </p>
+        <h5>Programa 004</h5>
+    </div>
+</body>
+
+</html>

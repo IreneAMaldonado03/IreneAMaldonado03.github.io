@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Media/icon.png">
+    <title>Impresora2</title>
+    <style>
+    body{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        background-color: #242320;
+        color: rgb(247, 247, 247);
+    }
+    div{
+        padding: 1rem;
+        display: inline-block;
+        background-color: #570f0f;
+    }
+    h5{
+        text-align: right;
+        font-size: 1rem;
+        margin: 0;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    p{
+        text-align: left;
+        font-size: xx-large;
+        font-style: italic;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Triangulo</h1>
+        <h3>Impresora de Triangulo</h3>
+        <p>
+            <script>
+                var dibujo=5;
+                for (let i = 1; i < dibujo; i++) { 
+                    let dibujo='';
+                    
+                    for (let j = 1; j <= i; j++) { 
+                        dibujo += '# ';
+                        
+                    }
+                document.write(dibujo);
+                document.write('<br>');
+                }
+                for (let i = 3; i >= 1; i--) { 
+                    let dibujo=' ';
+                    
+                    for (let j = 1; j <= i; j++) { 
+                        dibujo += '# ';
+                        
+                    }
+                document.write(dibujo);
+                document.write('<br>');
+                }
+
+            </script>
+        </p>
+        <h5>Programa 007</h5>
+    </div> 
+</body>
+</html>

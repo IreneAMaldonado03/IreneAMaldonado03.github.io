@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Media/icon.png">
+    <title>Promedio</title>
+    <style>
+    body{
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-top: 2.5rem;
+        padding-top: 2.5rem;
+        background-color: #242320;
+        color: rgb(29, 31, 31);
+    }
+    div{
+        padding: 1rem;
+        display: inline-block;
+        background-color: #e7d378;
+    }
+    h5{
+        text-align: right;
+        font-size: 1rem;
+        margin: 0;
+    }
+    h1{
+        font-size: 3rem;
+    }
+    table{
+        border: 2px solid #242320;
+        text-align: center;
+    }
+    thead{
+        font-weight: bold;
+        border: 2px solid #242320;
+    }
+    tr{
+        border: 2px solid #242320;
+    }
+    button{
+        background-color: rgb(99, 81, 1);
+        color: aliceblue;
+    }
+    .res{
+        font-weight: bold;
+        text-align: center;
+    }
+    .tbl{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Historial Academico</h1>
+        <p>
+            <script>
+                var alumno =prompt('Ingrese su nombre:','Ana');
+                var numMaterias= prompt('¿Cuantas materias vas a ingresar?','1')
+                var nMaterias= parseInt(numMaterias);
+                var materias=[];
+                var calificaciones=[];
+                //Recopilacion de calificaciones 
+                for (var i = 0; i < nMaterias; i++) {
+                    materias.push(prompt('Ingresa la materia ' + (i + 1), 'X'));
+                    calificaciones.push(parseFloat(prompt('Ingresa la calificación para ' + materias[i], '8')));  
+                }
+                //Promedio
+                var suma = 0;
+                for (var i = 0; i < calificaciones.length; i++) {
+                suma += calificaciones[i];
+                }
+                var promedio = suma / calificaciones.length;
+
+                var tabla = '<table><thead><tr><th>Materia</th><th>Calificación</th></tr></thead><tbody>';
+                for (var i = 0; i < materias.length; i++) {
+                tabla += '<tr><td>' + materias[i] + '</td><td>' + calificaciones[i] + '</td></tr>';
+                }
+                tabla += '</tbody></table>';
+            </script>
+        </p>
+        <p class="res">
+            <script>
+                document.write(alumno+' tu promedio es: '+promedio.toFixed(2));
+                document.write('<br> Y tus calificaciones son las siguientes:<br>');
+            </script>
+        </p>
+        <div class="tbl">
+            <script>
+                document.write(tabla);
+            </script>
+        </div>
+        <p class="oo">
+            <script >
+                document.write("¿Desea realizar otra operación? ");
+                document.write("<button onclick='location.reload()'>SI</button>");
+                document.write("<button onclick='printMessage()'>NO</button>");
+                function printMessage() {
+                    document.write("Gracias por usar esta pagina web"); 
+                }
+            </script>
+        </p>
+        <h5>Programa 005</h5>
+    </div>    
+</body>
+</html>
