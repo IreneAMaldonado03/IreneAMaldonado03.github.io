@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tiempo</title>
+  <link rel="stylesheet" href="../style6.css">
+</head>
+<body class="tiempo">
+  <header>
+    <h1>Conversor de tiempo</h1>
+  </header>
+  <main>
+    <form action="">
+      <label for="unidad_origen">Unidad origen</label>
+      <select id="unidad_origen">
+        <option value="segundos">Segundos</option>
+        <option value="minutos">Minutos</option>
+        <option value="horas">Horas</option>
+        <option value="días">Días</option>
+      </select>
+
+      <label for="valor_origen">Valor origen</label>
+      <input type="number" id="valor_origen" placeholder="100">
+
+      <br>
+      <label for="unidad_destino">Unidad destino</label>
+      <select id="unidad_destino">
+        <option value="segundos">Segundos</option>
+        <option value="minutos">Minutos</option>
+        <option value="horas">Horas</option>
+        <option value="días">Días</option>
+      </select>
+      <button type="submit" onclick="converTiempog()">Convertir</button>
+    </form>
+    <section class="resultado">
+      <h2>Resultado</h2>
+      <p id="resultado"></p>
+    </section>
+    <a href="../E6.html">Inicio</a>
+  </main>
+  <script src="../E6.js"></script>
+</body>
+</html>

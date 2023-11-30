@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Peso</title>
+  <link rel="stylesheet" href="../style6.css">
+</head>
+<body class="peso">
+  <header>
+    <h1>Conversor de peso</h1>
+  </header>
+  <main>
+    <form action="">
+      <label for="unidad_origen">Unidad origen</label>
+      <select id="peso_origen">
+        <option value="miligramo">Miligramo</option>
+        <option value="gramo">Gramo</option>
+        <option value="kilogramo">Kilogramo</option>
+      </select>
+
+      <label for="valor_origen">Valor origen</label>
+      <input type="number" id="valor_origen" placeholder="100">
+
+      <br>
+      <label for="unidad_destino">Unidad destino</label>
+      <select id="peso_destino">
+        <option value="miligramo">Miligramo</option>
+        <option value="gramo">Gramo</option>
+        <option value="kilogramo">Kilogramo</option>
+      </select>
+      <button type="submit">Convertir</button>
+    </form>
+    <section class="resultado">
+      <h2>Resultado</h2>
+      <p id="resultado"></p>
+    </section>
+    <a href="../E6.html">Inicio</a>
+  </main>
+  <script src="../E6.js"></script>
+</body>
+</html>

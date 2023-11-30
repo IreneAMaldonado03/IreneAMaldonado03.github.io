@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Temperatura</title>
+  <link rel="stylesheet" href="../style6.css">
+</head>
+<body class="temperatura">
+  <header>
+    <h1>Conversor de Temperatura</h1>
+  </header>
+  <main>
+    <form action="">
+      <label for="unidad_origen">Unidad origen</label>
+      <select id="temperatura_origen">
+        <option value="c">Celcius(C°)</option>
+        <option value="f">Farenheit(F°)</option>
+        <option value="k">Kelvin(K°)</option>
+      </select>
+
+      <label for="valor_origen">Valor origen</label>
+      <input type="number" id="valor_origen" placeholder="100">
+
+      <br>
+      <label for="unidad_destino">Unidad destino</label>
+      <select id="temperatura_destino">
+        <option value="c">Celcius(C°)</option>
+        <option value="f">Farenheit(F°)</option>
+        <option value="k">Kelvin(K°)</option>
+      </select>
+      <button type="submit">Convertir</button>
+    </form>
+    <section class="resultado">
+      <h2>Resultado</h2>
+      <p id="resultado"></p>
+    </section>
+    <a href="../E6.html">Inicio</a>
+  </main>
+  <script src="../E6.js"></script>
+</body>
+</html>

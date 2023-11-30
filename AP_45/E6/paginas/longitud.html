@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Longitud</title>
+  <link rel="stylesheet" href="../style6.css">
+</head>
+<body class="longitud">
+  <header>
+    <h1>Conversor de Longitud</h1>
+  </header>
+  <main>
+    <form action="">
+      <label for="unidad_origen">Unidad origen</label>
+      <select id="longitud_origen">
+        <option value="milimetro">Milimetro</option>
+        <option value="centimetro">Centimetro</option>
+        <option value="metro">Metro</option>
+        <option value="kilometro">Kilometro</option>
+      </select>
+
+      <label for="valor_origen">Valor origen</label>
+      <input type="number" id="valor_origen" placeholder="100">
+
+      <br>
+      <label for="unidad_destino">Unidad destino</label>
+      <select id="longitud_destino">
+        <option value="milimetro">Milimetro</option>
+        <option value="centimetro">Centimetro</option>
+        <option value="metro">Metro</option>
+        <option value="kilometro">Kilometro</option>
+      </select>
+      <button type="submit">Convertir</button>
+    </form>
+    <section class="resultado">
+      <h2>Resultado</h2>
+      <p id="resultado"></p>
+    </section>
+    <a href="../E6.html">Inicio</a>
+  </main>
+  <script src="../E6.js"></script>
+</body>
+</html>
